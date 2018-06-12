@@ -1,0 +1,229 @@
+.programs {
+  padding: $base-spacing-unit * 4 0;
+
+  @media #{$medium} {
+    padding: $base-spacing-unit * 6 0 $base-spacing-unit * 11;
+  }
+
+  &__title {
+    position: relative;
+    display: inline-block;
+    text-transform: capitalize;
+
+    &:after,
+    &:before {
+      font-family: $font-family-icons;
+      position: absolute;
+      font-size: 20px;
+      bottom: 50%;
+      transform: translateY(50%);
+    }
+
+    &:after {
+      content: "\e900";
+      right: -59px;
+    }
+
+    &:before {
+      content: "\e900";
+      left: -59px;
+    }
+
+    &-container {
+      text-align: center;
+    }
+
+    &-description {
+      font-size: 16px;
+      color: $gunmetal;
+      font-family: "MinionPro";
+      padding-bottom: $base-spacing-unit * 4;
+    }
+  }
+
+  &__menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    margin-bottom: $base-spacing-unit * 4;
+    flex-direction: column;
+
+    @media #{$medium} {
+      flex-direction: row;
+    }
+
+    &:after {
+      content: "";
+      background-color: $pinkish-grey;
+      height: 1px;
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      display: none;
+
+      @media #{$medium} {
+        display: block;
+      }
+    }
+
+    &-item {
+      color: $greyish;
+      font-size: 21px;
+      font-family: "Intro";
+      position: relative;
+      padding: 0 $base-spacing-unit * 4 $base-spacing-unit $base-spacing-unit * 4;
+      margin-bottom: $base-spacing-unit;
+      cursor: pointer;
+      text-transform: capitalize;
+
+      @media #{$medium} {
+        margin-bottom: 0;
+        padding: 0 $base-spacing-unit * 5 $base-spacing-unit $base-spacing-unit * 5;
+      }
+
+      &:before {
+        height: 3px;
+        width: 80%;
+        content: "";
+        background-color: transparent;
+        position: absolute;
+        right: 50%;
+        transform: translateX(50%);
+        bottom: 0;
+        transition: 0.3s;
+      }
+
+      &:hover {
+        color: $black;
+
+        &:before {
+          background-color: $black;
+        }
+      }
+    }
+  }
+
+  &__course {
+    margin-bottom: $base-spacing-unit * 3;
+  }
+
+  &__label {
+    font-family: "PlayfairDisplay";
+    font-size: 30px;
+    font-weight: 900;
+    margin-bottom: $base-spacing-unit * 3;
+  }
+
+  &__info {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    &-container {
+      position: relative;
+      padding-top: $half-spacing-unit;
+    }
+
+    &-word {
+      position: absolute;
+      z-index: -1;
+      font-size: 70px;
+      top: -226px;
+      right: -4px;
+      letter-spacing: 5px;
+      font-family: "Intro";
+      color: $white-grey;
+      text-transform: capitalize;
+
+      @media #{$medium} {
+        font-size: 200px;
+        top: -106px;
+        right: 56px;
+      }
+    }
+
+    &-item {
+      font-family: "MinionPro";
+      list-style: none;
+      margin-bottom: $base-spacing-unit;
+      display: flex;
+      align-items: center;
+    }
+
+    &-icon {
+      font-size: 26px;
+      margin-right: $half-spacing-unit;
+    }
+  }
+
+  &__price {
+    display: block;
+    font-size: 56px;
+    font-family: "PlayfairDisplay";
+    padding-bottom: 40px;
+    font-weight: 900;
+  }
+
+  &__price-currency {
+    font-size: 30px;
+  }
+
+  &__content-container {
+    max-width: 324px;
+    border-top: none;
+    padding-top: $base-spacing-unit;
+    margin-bottom: $base-spacing-unit;
+
+    @media #{$medium} {
+      border-top: 1px solid $warm-grey;
+    }
+  }
+
+  &__content {
+    font-family: "MinionPro";
+    font-size: 15px;
+    margin-bottom: $half-spacing-unit;
+    color: $light-grey;
+  }
+
+  &__check,
+  &__cross {
+    position: relative;
+    bottom: -3px;
+  }
+
+  &__check {
+    color: $dark-yellow-green;
+  }
+
+  &__cross {
+    color: $red;
+  }
+
+  &__img-bottom {
+    position: absolute;
+    bottom: -50px;
+    right: 0;
+    z-index: 5;
+    z-index: 20;
+    user-select: none;
+    pointer-events: none;
+  }
+
+  &__subtitle {
+    font-family: "Intro";
+    font-size: 18px;
+    height: 69px;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+  }
+
+  &__lists {
+    margin-bottom: $base-spacing-unit * 3;
+  }
+}

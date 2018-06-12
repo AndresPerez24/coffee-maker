@@ -1,0 +1,49 @@
+.coffee-bean {
+  position: absolute;
+  z-index: 20;
+  user-select: none;
+  pointer-events: none;
+  display: none;
+
+  @media #{$large} {
+    display: block;
+  }
+
+  &--1 {
+    top: -210px;
+    right: 60px;
+  }
+
+  &--2 {
+    top: 190px;
+  }
+
+  &--3 {
+    right: 0;
+    top: 710px;
+  }
+
+  &--4 {
+    left: 55px;
+    bottom: -130px;
+  }
+
+  &--5 {
+    top: -200px;
+    right: 30px;
+  }
+
+  &--6 {
+    left: 180px;
+    @media #{$extra-large} {
+      position: absolute;
+      top: 170px;
+      left: 315px;
+    }
+  }
+
+  &--7 {
+    bottom: 80px;
+    right: 0;
+  }
+}

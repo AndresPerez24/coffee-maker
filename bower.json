@@ -1,0 +1,9 @@
+{
+  "name": "challenge",
+  "private": true,
+  "dependencies": {
+    "jquery": "~2.1.1",
+    "owl.carousel": "^2.3.4",
+    "lozad": "^1.4.0"
+  }
+}

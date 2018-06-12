@@ -1,0 +1,46 @@
+@font-face {
+  font-family: "Intro";
+  src:
+    url("../fonts/Intro/Intro.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/Intro/Intro.otf") format("opentype"),
+    url("../fonts/Intro/Intro.woff") format("woff"),
+    url("../fonts/Intro/Intro.ttf") format("truetype"),
+    url("../fonts/Intro/Intro.svg#Intro") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PlayfairDisplay';
+  src:
+    url('../fonts/PlayfairDisplay/PlayfairDisplay.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/PlayfairDisplay/PlayfairDisplay.woff') format('woff'),
+    url('../fonts/PlayfairDisplay/PlayfairDisplay.ttf') format('truetype'),
+    url('../fonts/PlayfairDisplay/PlayfairDisplay.svg#PlayfairDisplay') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'IntroRustG-Base2Line';
+  src:
+    url('../fonts/IntroRustG-Base2Line/IntroRustG-Base2Line.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/IntroRustG-Base2Line/IntroRustG-Base2Line.otf') format('opentype'),
+    url('../fonts/IntroRustG-Base2Line/IntroRustG-Base2Line.woff') format('woff'),
+    url('../fonts/IntroRustG-Base2Line/IntroRustG-Base2Line.ttf') format('truetype'),
+    url('../fonts/IntroRustG-Base2Line/IntroRustG-Base2Line.svg#IntroRustG-Base2Line') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MinionPro';
+  src:
+    url('../fonts/MinionPro/MinionPro.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/MinionPro/MinionPro.otf') format('opentype'),
+    url('../fonts/MinionPro/MinionPro.woff') format('woff'),
+    url('../fonts/MinionPro/MinionPro.ttf') format('truetype'),
+    url('../fonts/MinionPro/MinionPro.svg#MinionPro') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}

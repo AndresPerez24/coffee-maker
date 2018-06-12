@@ -1,0 +1,121 @@
+.hero {
+  background-image: url("../images/hero-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding-bottom: $base-spacing-unit * 8;
+  color: $white;
+  text-align: center;
+
+  @media #{$medium} {
+    background-attachment: fixed;
+  }
+
+  &__stars {
+    padding: $base-spacing-unit * 2;
+
+    @media #{$medium} {
+      padding: $base-spacing-unit * 5 0 $half-spacing-unit * 3;
+    }
+
+    &-icon {
+      margin-left: $half-spacing-unit;
+      color: $sand;
+    }
+  }
+
+  &__title-description {
+    font-family: "PlayfairDisplay";
+    font-size: 17px;
+    padding-bottom: $base-spacing-unit * 2;
+    position: relative;
+    display: inline-block;
+
+    &:before,
+    &:after {
+      content: "";
+      border-style: solid;
+      position: absolute;
+      top: 11px;
+      display: none;
+
+      @media #{$medium} {
+        display: block;
+      }
+    }
+
+    &:before {
+      border-width: 3px 115px 3px 0;
+      border-color: transparent $sand transparent transparent;
+      left: -188px;
+    }
+
+    &:after {
+      border-width: 3px 0px 3px 115px;
+      border-color: transparent transparent transparent $sand;
+      right: -188px;
+    }
+  }
+
+  &__main-title {
+    text-transform: capitalize;
+    font-size: 47px;
+
+    @media #{$medium} {
+      font-size: 57px;
+    }
+
+    &--color {
+      color: $sand;
+    }
+  }
+
+  &__subtitle {
+    font-size: 21px;
+    font-family: "PlayfairDisplay";
+    margin-bottom: $half-spacing-unit * 3;
+  }
+
+  &__circle {
+    height: 7px;
+    width: 7px;
+    background-color: $sand;
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+    margin-bottom: $base-spacing-unit * 3;
+
+    &:before,
+    &:after {
+      content: "";
+      border-style: solid;
+      top: 1px;
+      position: absolute;
+    }
+
+    &:before {
+      border-width: 3px 65px 2px 0;
+      border-color: transparent $sand transparent transparent;
+      left: -70px;
+    }
+
+    &:after {
+      border-width: 3px 0px 2px 65px;
+      border-color: transparent transparent transparent $sand;
+      right: -70px;
+    }
+  }
+
+  &__button {
+    border-radius: 50%;
+    border: solid 1px $white;
+    color: $sand;
+    display: block;
+    padding: $base-spacing-unit;
+    margin: 0 auto;
+    text-align: center;
+    width: 61px;
+    height: 61px;
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,136 @@
+.section {
+  background-image: url("../images/bg-pattern.png");
+  background-position: center;
+  background-repeat: repeat;
+  color: $black;
+  position: relative;
+  z-index: 10;
+
+  &__bottom-image {
+    position: absolute;
+    height: 126px;
+    width: 100%;
+    bottom: -110px;
+    right: 0;
+    z-index: 3;
+    user-select: none;
+    pointer-events: none;
+  }
+
+  &__top-image {
+    position: absolute;
+    height: 126px;
+    width: 100%;
+    right: 0;
+    z-index: 3;
+    top: -115px;
+    z-index: 3;
+    user-select: none;
+    pointer-events: none;
+  }
+
+  &__title {
+    position: relative;
+    display: inline-block;
+
+    &--black {
+      color: $black;
+    }
+
+    &--white {
+      color: $white;
+    }
+
+    &--with-line,
+    &--with-line-large {
+      &:after {
+        content: "";
+        position: absolute;
+        bottom: -$half-spacing-unit;
+        right: 50%;
+        transform: translateX(50%);
+        border-bottom: 1px solid $warm-grey;
+      }
+    }
+
+    &--with-line {
+      margin-bottom: $base-spacing-unit * 2;
+
+      &:after {
+        width: 215px;
+      }
+    }
+
+    &--with-line-large {
+      margin-bottom: $half-spacing-unit * 3;
+
+      &:after {
+        width: 100%;
+      }
+    }
+  }
+
+  &__title-lines {
+    display: block;
+    height: 2px;
+    width: 31px;
+
+    position: absolute;
+    bottom: 50%;
+    transform: translateY(50%);
+
+    &:before,
+    &:after {
+      content: "";
+      display: inline-block;
+      height: 2px;
+      width: 22px;
+      position: absolute;
+      right: 0;
+    }
+
+    &:before {
+      top: -5px;
+    }
+
+    &:after {
+      top: 5px;
+    }
+
+    &--left {
+      left: -$base-spacing-unit * 2;
+
+      &:before,
+      &:after {
+        right: 0;
+      }
+    }
+
+    &--right {
+      right: -$base-spacing-unit * 2;
+
+      &:before,
+      &:after {
+        left: 0;
+      }
+    }
+
+    .section__title--black & {
+      background-color: $black;
+
+      &:before,
+      &:after {
+        background-color: $black;
+      }
+    }
+
+    .section__title--white & {
+      background-color: $white;
+
+      &:before,
+      &:after {
+        background-color: $white;
+      }
+    }
+  }
+}

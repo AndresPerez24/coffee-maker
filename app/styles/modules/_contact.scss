@@ -1,0 +1,74 @@
+.contact {
+  padding: $base-spacing-unit * 5 0;
+
+  @media #{$medium} {
+    padding: $base-spacing-unit * 6 0 $base-spacing-unit * 12;
+  }
+
+  &__container {
+    @media #{$large} {
+      padding-left: $base-spacing-unit * 24;
+    }
+  }
+
+  &__subtitle {
+    margin-bottom: $base-spacing-unit * 5;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    &-icon {
+      color: $black;
+      position: absolute;
+      font-size: 110px;
+      top: -25px;
+      right: -55px;
+
+      @media #{$medium} {
+        font-size: 130px;
+        top: -38px;
+        right: -95px;
+      }
+    }
+  }
+
+  &__input {
+    border-bottom: 1px solid $warm-grey;
+    max-width: 385px;
+    padding-bottom: $half-spacing-unit;
+    margin-bottom: $base-spacing-unit * 4;
+    border-radius: 0;
+
+    @media #{$medium} {
+      margin-bottom: $base-spacing-unit * 2;
+    }
+  }
+
+  &__button {
+    position: relative;
+
+    @media #{$extra-large} {
+      position: absolute;
+      bottom: 50px;
+      right: 100px;
+    }
+  }
+
+  &__coffee-beans {
+    position: absolute;
+    z-index: 20;
+    user-select: none;
+    pointer-events: none;
+    left: 0;
+    top: -60px;
+    display: none;
+    z-index: -1;
+
+    @media #{$medium} {
+      display: block;
+    }
+  }
+}

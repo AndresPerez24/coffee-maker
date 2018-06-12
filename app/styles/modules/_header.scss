@@ -1,0 +1,87 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Intro";
+  position: relative;
+  padding: $half-spacing-unit $base-spacing-unit;
+  color: $white;
+
+  @media #{$extra-large} {
+    padding: 0 $base-spacing-unit * 2;
+  }
+
+  &:before,
+  &:after {
+    content: "";
+    background-color: rgba($white, 0.2);
+    height: 1px;
+    position: absolute;
+    bottom: 0;
+  }
+
+  &:before {
+    width: 31px;
+    left: 0;
+    display: none;
+
+    @media #{$extra-large} {
+      display: block;
+    }
+  }
+
+  &:after {
+    width: 100vw;
+    right: 0;
+
+    @media #{$extra-large} {
+      width: calc(100vw - 280px);
+    }
+  }
+
+  &__logo {
+    top: $base-spacing-unit * 2;
+    width: 110px;
+
+    @media #{$extra-large} {
+      position: absolute;
+      width: 220px;
+    }
+  }
+
+  &__number {
+    font-size: 20px;
+    letter-spacing: -1px;
+
+    @media #{$extra-large} {
+      font-size: 26px;
+    }
+  }
+
+  &__nav {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    position: fixed;
+    background-color: rgba($black, 0.85);
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+    right: -100vw;
+    z-index: 99;
+    transition: 0.3s;
+    flex-direction: column;
+
+    @media #{$extra-large} {
+      position: static;
+      background-color: transparent;
+      flex-direction: row;
+      height: auto;
+      width: auto;
+    }
+
+    &.is-active {
+      right: 0;
+    }
+  }
+}

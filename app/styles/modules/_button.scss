@@ -1,0 +1,32 @@
+.button {
+  font-family: "Intro";
+  transition: 0.3s;
+  padding: 0;
+  cursor: pointer;
+  height: 60px;
+  width: 245px;
+  font-size: 14px;
+  border: 1px solid transparent;
+
+  &--primary {
+    background-color: $black;
+    border-color: $black;
+    color: $white;
+
+    &:hover {
+      background-color: transparent;
+      color: $black;
+    }
+  }
+
+  &--secondary {
+    background-color: transparent;
+    border-color: $black;
+    color: $black;
+
+    &:hover {
+      background-color: $black;
+      color: $white;
+    }
+  }
+}

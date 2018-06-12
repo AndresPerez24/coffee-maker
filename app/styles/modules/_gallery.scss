@@ -1,0 +1,95 @@
+.gallery {
+  background-image: url("../images/beans-bg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: $base-spacing-unit * 6 0 $base-spacing-unit * 11;
+  color: $white;
+  position: relative;
+  z-index: 1;
+
+  @media #{$medium} {
+    background-attachment: fixed;
+  }
+
+  &__title-container {
+    text-align: center;
+    margin-bottom: $base-spacing-unit * 7 / 2;
+  }
+
+  &__label {
+    color: $sand;
+  }
+
+  &__square {
+    border: 1px solid $sand;
+    width: 68px;
+    height: 68px;
+    position: relative;
+
+    &:before {
+      font-family: $font-family-icons;
+      position: absolute;
+      bottom: 50%;
+      transform: translateY(50%);
+      font-size: 90px;
+    }
+
+    &--left {
+      &:before {
+        content: "\e904";
+        left: -50px;
+      }
+    }
+
+    &--right {
+      &:before {
+        content: "\e902";
+        right: -50px;
+      }
+    }
+  }
+
+  &__info-slider {
+    position: absolute;
+    bottom: 190px;
+    transform: translateX(50%);
+    right: 50%;
+    font-size: 19px;
+  }
+
+  .owl-theme {
+    .owl-nav {
+      position: relative;
+      max-width: 350px;
+      margin: $base-spacing-unit * 2 auto 0;
+
+      .owl-prev,
+      .owl-next {
+        position: absolute;
+
+        &:hover {
+          background-color: transparent;
+        }
+      }
+
+      .owl-prev {
+        left: $half-spacing-unit / 2;
+
+        @media #{$medium} {
+          right: -$base-spacing-unit;
+        }
+      }
+
+      .owl-next {
+        right: unset;
+        left: 237px;
+
+        @media #{$extra-small} {
+          left: unset;
+          right: $half-spacing-unit / 2;
+        }
+      }
+    }
+  }
+}

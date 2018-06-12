@@ -1,0 +1,98 @@
+.footer {
+  background-image: url("../images/footer-bg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: $base-spacing-unit * 6 0;
+  color: $white;
+  position: relative;
+  z-index: 1;
+  text-align: center;
+
+  @media #{$medium} {
+    background-attachment: fixed;
+  }
+
+  &__title-container {
+    max-width: 690px;
+    margin: 0 auto $base-spacing-unit auto;
+  }
+
+  &__description {
+    text-align: justify;
+
+    &--right {
+      @media #{$large} {
+        padding-right: $base-spacing-unit;
+      }
+    }
+
+    &--left {
+      @media #{$large} {
+        padding-left: $base-spacing-unit;
+      }
+    }
+  }
+
+  &__table {
+    font-family: "Intro";
+    border: 1px solid $pinkish-grey;
+    background-color: rgba($black, 0.5);
+    margin-top: $base-spacing-unit * 4;
+    margin-bottom: $base-spacing-unit * 2;
+  }
+
+  &__table-cell {
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &--border-right {
+      border-right: 1px solid rgba($pinkish-grey, 0.2);
+    }
+  }
+
+  &__icon {
+    font-size: 30px;
+    color: $white;
+  }
+
+  &__icons {
+    border-bottom: 1px solid rgba($pinkish-grey, 0.2);
+  }
+
+  &__info {
+    font-size: 13px;
+
+    @media #{$medium} {
+      font-size: 15px;
+    }
+  }
+
+  &__text {
+    position: relative;
+    margin-right: $base-spacing-unit;
+    padding-right: $base-spacing-unit;
+
+    &:after {
+      content: "";
+      position: absolute;
+      height: 25px;
+      width: 1px;
+      background-color: $white;
+      right: 0;
+      bottom: 50%;
+      transform: translateY(50%);
+    }
+  }
+
+  &__label {
+    font-family: "Intro";
+    font-size: 12px;
+  }
+
+  &__navigation {
+    border-bottom: 1px solid rgba($pinkish-grey, 0.4);
+  }
+}

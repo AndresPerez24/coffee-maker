@@ -1,0 +1,10 @@
+.table {
+  border-collapse: collapse;
+  border: 1px solid $black;
+  color: $light-grey;
+
+  td {
+    border: 1px solid $black;
+    padding: 7px 17px;
+  }
+}

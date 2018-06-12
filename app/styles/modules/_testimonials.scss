@@ -1,0 +1,94 @@
+.testimonials {
+  padding: $base-spacing-unit * 5 0;
+  text-align: center;
+
+  @media #{$medium} {
+    padding: $base-spacing-unit * 6 0 $base-spacing-unit * 9;
+  }
+
+  &__title-description {
+    color: $gunmetal;
+  }
+
+  &__container-img {
+    position: relative;
+    display: inline-block;
+  }
+
+  &__img {
+    width: 184px;
+    margin: 0 auto;
+  }
+
+  &__social-icon {
+    display: block;
+    height: 39px;
+    width: 39px;
+    border-radius: 50%;
+    background: $french-blue;
+    color: $white;
+    bottom: 50%;
+    transform: translateY(50%);
+    position: absolute;
+    top: 7px;
+    right: -4px;
+    text-align: center;
+    line-height: 45px;
+  }
+
+  &__name {
+    font-family: "Intro";
+    font-size: 18px;
+    padding: $half-spacing-unit * 3 0;
+    margin-bottom: 0;
+    font-weight: 700;
+  }
+
+  &__testimony {
+    margin-bottom: 0;
+    padding-bottom: $half-spacing-unit;
+    color: $gunmetal;
+  }
+
+  .owl-theme {
+    .owl-dots {
+      .owl-dot {
+        &:hover,
+        &.active {
+          span {
+            background-color: $sand;
+          }
+        }
+
+        span {
+          background-color: $black;
+          transition: 0.3s;
+        }
+      }
+    }
+
+    .owl-nav {
+      .owl-prev,
+      .owl-next {
+        position: absolute;
+        bottom: 50%;
+        transform: translateY(50%);
+        margin: 0;
+        color: $gunmetal;
+
+        &:hover {
+          background-color: transparent;
+          color: $black;
+        }
+      }
+
+      .owl-prev {
+        left: 0;
+      }
+
+      .owl-next {
+        right: 0;
+      }
+    }
+  }
+}
